@@ -27,7 +27,7 @@ class AdminSidebar extends React.Component{
                 </li>
                 <li>
                     <a href="#" class="nav-link link-dark">
-                    <svg class="bi me-2" width="16" height="16"></svg>
+                    <i class="bi me-2 fa fa-road" width="16" height="16"></i>
                     Road Management
                     </a>
                 </li>
