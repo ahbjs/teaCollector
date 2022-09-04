@@ -5,6 +5,10 @@ import PersonImg from '../img/person.png';
 import '../css/sidebar.css';
 import logo from '../img/logo.png';
 
+import {
+    Link
+} from "react-router-dom";
+
 class AdminSidebar extends React.Component{
   
     render(){
@@ -20,16 +24,16 @@ class AdminSidebar extends React.Component{
                 <hr/>
                 <ul class="nav nav-pills flex-column mb-auto">
                 <li>
-                    <a href="#" class="nav-link link-dark">
+                    <Link to='/' class="nav-link link-dark">
                     <i class="bi me-2 fa fa-tachometer" width="16" height="16"></i>
                     Dashboard
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#" class="nav-link link-dark">
+                    <Link to='/RoadManagement' class="nav-link link-dark">
                     <i class="bi me-2 fa fa-road" width="16" height="16"></i>
                     Road Management
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <a href="#" class="nav-link link-dark">
