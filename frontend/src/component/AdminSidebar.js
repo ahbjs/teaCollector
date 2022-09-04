@@ -11,7 +11,6 @@ class AdminSidebar extends React.Component{
 
         return (
             
-            <main className='sideBarCustom'>
             
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style={{width: "280px"}}>
                 <div style={{textAlign:"center"}}>
@@ -60,7 +59,6 @@ class AdminSidebar extends React.Component{
                
                 </div>
             </div>
-            </main>
         )
       
     }
