@@ -4,6 +4,8 @@ import 'font-awesome/css/font-awesome.min.css';
 import AdminSidebar from '../AdminSidebar';
 import '../../css/sidebar.css';
 import '../../css/admin.css';
+import axios from 'axios';
+
 import {
     Link
 } from "react-router-dom";
@@ -11,9 +13,23 @@ import {
 class RoadManagement extends React.Component{
     constructor(props){
       super(props);
-      this.state = {apiResponse:[]};
+      this.state = {roads:[]};
     }
   
+    setRoads(data){
+        this.setState({
+            roads : data
+        });
+        console.log(this.state.roads);
+    }
+
+    componentDidMount(){
+        axios.post("http://localhost:8000/road/getRoads")
+        .then(data => this.setRoads(data.data))
+        .catch(error => console.log(error));
+        
+    }    
+
     render(){
 
         return (
@@ -41,20 +57,25 @@ class RoadManagement extends React.Component{
                                 <tr>
                                     <th>Truck ID</th>
                                     <th>Assign Road</th>
-                                    <th>Total Sellers</th>
+                                    <th>Date</th>
                                     <th>Action</th>
                                 </tr>
-                                <tr>
-                                    <td>ahb</td>
-                                    <td>ahb</td>
-                                    <td>ahb</td>
-                                    <td>
-                                        <form>
-                                            <button className='btn btn-warning btn-sm' style={{color:"#fff",marginRight:"3px",width:"45%"}}>Edit</button>
-                                            <button className='btn btn-danger btn-sm' style={{width:"45%"}}>Delete</button>
-                                        </form>
-                                    </td>
-                                </tr>
+                                {this.state.roads.map(data => {
+                                    return(
+                                        <tr>
+                                            <td>{data.lorryID}</td>
+                                            <td>{data.roadName}</td>
+                                            <td>{data.date}</td>
+                                            <td>
+                                                <form>
+                                                    <button className='btn btn-warning btn-sm' style={{color:"#fff",marginRight:"3px",width:"45%"}} value={data._id}>Edit</button>
+                                                    <button className='btn btn-danger btn-sm' style={{width:"45%"}} value={data._id}>Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    )
+                                })}
+                               
                             </table>
                         </div>
 
