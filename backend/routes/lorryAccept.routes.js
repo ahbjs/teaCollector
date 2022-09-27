@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let lorryAccept = require("../models/lorryAccept.model");
+let lorryAccept = require("../model/lorryAccept.model");
 
 router.route("/add").post((req, res) => {
   const name = req.body.name;

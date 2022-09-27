@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let teaPrice = require("../models/teaPrice.model");
+let teaPrice = require("../model/teaPrice.model");
 
 router.route("/add").post((req, res) => {
   const sellerID = req.body.sellerID;
