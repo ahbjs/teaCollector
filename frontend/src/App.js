@@ -10,6 +10,7 @@ import {
 import AdminDashboard from './component/Admin/AdminDashboard';
 import RoadManagement from './component/Admin/RoadManagement';
 import AddRoad from './component/Admin/AddRoad';
+import EditRoad from './component/Admin/EditRoad';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/" element={<AdminDashboard/>} />
         <Route exact path="/RoadManagement" element={<RoadManagement/>} />
         <Route exact path="/AddRoad" element={<AddRoad/>} />
+        <Route exact path="/EditRoad/:id" element={<EditRoad/>} />
       </Routes>
     </div>
   </Router>

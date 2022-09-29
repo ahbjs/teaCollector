@@ -24,11 +24,25 @@ class RoadManagement extends React.Component{
     }
 
     componentDidMount(){
+        this.loadRoads();
+        
+    }
+
+    loadRoads(){
         axios.post("http://localhost:8000/road/getRoads")
         .then(data => this.setRoads(data.data))
         .catch(error => console.log(error));
-        
-    }    
+    }
+    
+    deleteRoad(id){
+        var dataSend = {
+            obID : id
+        }
+
+        axios.post("http://localhost:8000/road/deleteRoadbyId",dataSend)
+        .then(data => this.loadRoads())
+        .catch(error => console.log(error));
+    }
 
     render(){
 
@@ -68,8 +82,8 @@ class RoadManagement extends React.Component{
                                             <td>{data.date}</td>
                                             <td>
                                                 <form>
-                                                    <button className='btn btn-warning btn-sm' style={{color:"#fff",marginRight:"3px",width:"45%"}} value={data._id}>Edit</button>
-                                                    <button className='btn btn-danger btn-sm' style={{width:"45%"}} value={data._id}>Delete</button>
+                                                    <Link to={'/EditRoad/'+data._id}><button className='btn btn-warning btn-sm' style={{color:"#fff",marginRight:"3px",width:"45%"}} value={data._id}>Edit</button></Link>
+                                                    <button onClick={(e) => this.deleteRoad(data._id)} type="button" className='btn btn-danger btn-sm' style={{width:"45%"}} value={data._id}>Delete</button>
                                                 </form>
                                             </td>
                                         </tr>

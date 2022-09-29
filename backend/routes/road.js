@@ -25,4 +25,49 @@ router.post('/getRoads', async (req, res) => {
     });
 });
 
+router.post('/getRoadbyId', async (req, res) => {
+    var id = req.body.obID;
+    lorryRoadModel.findById(id, async function (err, data) {
+        if (err){
+            console.log(err);
+        }
+        else{
+            console.log(data);
+            res.json(data);
+        }
+    });
+});
+
+router.post('/deleteRoadbyId', async (req, res) => {
+    var id = req.body.obID;
+    lorryRoadModel.findById(id, async function (err, data) {
+        if (err){
+            console.log(err);
+        }
+        else{
+            console.log(data);
+            res.json(data);
+        }
+    }).deleteOne();
+});
+
+router.post('/updateRoadbyId', async (req, res) => {
+    var id = req.body.obID;
+    var road = req.body;
+    const lorryRoad = {
+        lorryID:road.lorryID,
+        roadName:road.roadName,
+        date:road.date
+    };
+    lorryRoadModel.findById(id).updateOne(lorryRoad,async function (err, data) {
+        if (err){
+            console.log(err);
+        }
+        else{
+            console.log(data);
+            res.json({result:1});
+        }
+    });
+});
+
 module.exports = router;
