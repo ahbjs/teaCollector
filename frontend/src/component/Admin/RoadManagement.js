@@ -44,6 +44,13 @@ class RoadManagement extends React.Component{
         .catch(error => console.log(error));
     }
 
+    getReport(){
+        axios.post("http://localhost:8000/road/getRoadReport")
+        .then(data => alert("ahb"))
+        .catch(error => console.log(error));
+        
+    }
+
     render(){
 
         return (
@@ -53,7 +60,7 @@ class RoadManagement extends React.Component{
                     <AdminSidebar />
                     <div className='col-lg-12 m-5'>
                         <h1>Road Management</h1>
-
+                        <a href='http://localhost:8000/road/getRoadReport'><button type='button' onClick={this.getReport} target='_blank'>Report</button></a>
                         <div className='bg-light table-shape' style={{width: "72%"}}>
                             <div className='col-lg-12'>
                                 <div className='row'>
