@@ -23,7 +23,7 @@ class AddSeller extends React.Component{
         }
 
         console.log(formData);
-        axios.post(`http://localhost:8000/seller/addSeller`, formData)
+        axios.post(`http://localhost:8000/teaCollection/addSeller`, formData)
         .then(res => {
             console.log(res.data);
             if(res.data.result === 1){

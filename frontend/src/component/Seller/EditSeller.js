@@ -28,7 +28,7 @@ class EditSeller extends React.Component{
             obID : this.id
         }
 
-        axios.post("http://localhost:8000/seller/getSellerbyId",dataSend)
+        axios.post("http://localhost:8000/teaCollection/getSellerbyId",dataSend)
         .then(data => this.setSeller(data.data))
         .catch(error => console.log(error));
         
@@ -47,7 +47,7 @@ class EditSeller extends React.Component{
         }
 
         console.log(formData);
-        axios.post(`http://localhost:8000/seller/updateSellerbyId`, formData)
+        axios.post(`http://localhost:8000/teaCollection/updateSellerbyId`, formData)
         .then(res => {
             console.log(res.data);
             if(res.data.result === 1){

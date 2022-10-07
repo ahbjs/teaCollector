@@ -23,5 +23,5 @@ const seller = new mongoose.Schema({
     }            
 });
 
-const sellerModel = mongoose.model("sellers",seller);
+const sellerModel = mongoose.model("teaCollection",seller);
 module.exports = sellerModel;

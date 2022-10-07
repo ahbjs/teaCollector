@@ -12,7 +12,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var lorry = require('./routes/lorry');
 var road = require('./routes/road');
-var seller = require('./routes/seller');
+var teaCollection = require('./routes/teaCollection');
 
 var mongoose = require("mongoose");
 require("dotenv").config();
@@ -34,7 +34,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/lorry', lorry);
 app.use('/road', road);
-app.use('/seller',seller);
+app.use('/teaCollection',teaCollection);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
