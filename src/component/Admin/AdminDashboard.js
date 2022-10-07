@@ -4,7 +4,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import AdminSidebar from '../AdminSidebar';
 import '../../css/sidebar.css';
 import '../../css/admin.css';
-import axios from "axios";
+import axios from "./../../axios-instance";
 
 class AdminDashboard extends React.Component{
     constructor(props){
@@ -21,7 +21,7 @@ class AdminDashboard extends React.Component{
     }
 
     componentDidMount(){
-        axios.get("http://localhost:8000/lorry/getLorry")
+        axios.get("./getLorry")
         .then(data => this.getLorry(data.data))
         .catch(error => console.log(error));
         
@@ -35,7 +35,7 @@ class AdminDashboard extends React.Component{
                 <main className='sideBarCustom'>
                     <AdminSidebar />
                     <div className='col-lg-12 m-5'>
-                        <h1>Dashboard</h1>
+                        <h1>Dashboard u</h1>
 
                         <div className='bg-light table-shape' style={{width: "72%"}}>
                             <table class="table table-borderless table-responsive m-0">
