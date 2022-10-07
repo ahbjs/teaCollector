@@ -21,7 +21,7 @@ class AdminDashboard extends React.Component{
     }
 
     componentDidMount(){
-        axios.get("https://tea-collector-api.herokuapp.com/road/getLorry")
+        axios.get("https://tea-collector-api.herokuapp.com/lorry/getLorry")
         .then(data => this.getLorry(data.data))
         .catch(error => console.log(error));
         
