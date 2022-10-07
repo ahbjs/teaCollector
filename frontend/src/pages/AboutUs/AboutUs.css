@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.headerTop{
+    position: absolute;
+width: 648px;
+height: 22.08px;
+left: 78px;
+top: 276px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 135.2%;
+/* or 22px */
+
+display: flex;
+align-items: center;
+text-transform: uppercase;
+
+color: #000000;
+}
+
+.headermiddle{
+    position: absolute;
+width: 497px;
+height: 79.12px;
+left: 78px;
+top: 270px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 55px;
+line-height: 86px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+
+.headerfoot{
+    position: absolute;
+width: 700px;
+height: 239px;
+left: 83px;
+top: 395px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+
+text-align:left;
+/* or 165% */
+
+
+color: #999191;
+
+}
+
+.AboutUsImg{
+    position: absolute;
+width: 540px;
+height: 357px;
+left: 834px;
+top: 325px;
+}
