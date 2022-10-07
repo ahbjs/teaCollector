@@ -25,7 +25,7 @@ class AddRoad extends React.Component{
         axios.post(`http://localhost:8000/road/addRoad`, formData)
         .then(res => {
             console.log(res.data);
-            if(res.data.result == 1){
+            if(res.data.result === 1){
                 alert("A new road has been added!");
             }
         })

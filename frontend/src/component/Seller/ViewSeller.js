@@ -5,13 +5,17 @@ import axios from 'axios';
 import teaStateImg from './../../img/teaStateBg.png';
 import NavBar from '../NavBar';
 
+import {
+    Link
+} from "react-router-dom";
+
 class ViewSeller extends React.Component{
     constructor(props){
       super(props);
       this.state = {sellers:[]};
     }
   
-    setRoads(data){
+    setSellers(data){
         this.setState({
             sellers : data
         });
@@ -20,9 +24,25 @@ class ViewSeller extends React.Component{
 
     componentDidMount(){
         axios.post("http://localhost:8000/seller/getSellers")
-        .then(data => this.setRoads(data.data))
+        .then(data => this.setSellers(data.data))
         .catch(error => console.log(error));
         
+    }
+
+    loadSellers(){
+        axios.post("http://localhost:8000/seller/getSellers")
+        .then(data => this.setSellers(data.data))
+        .catch(error => console.log(error));
+    }
+    
+    deleteSeller(id){
+        var dataSend = {
+            obID : id
+        }
+
+        axios.post("http://localhost:8000/seller/deleteSellerbyId",dataSend)
+        .then(data => this.loadSellers())
+        .catch(error => console.log(error));
     }
 
     render(){
@@ -59,8 +79,8 @@ class ViewSeller extends React.Component{
                                             <td>{data.collectionDate}</td>
                                             <td>
                                                 <form>
-                                                    <button className='btn btn-warning btn-sm' style={{color:"#fff",marginRight:"3px",width:"45%"}} value={data._id}>Edit</button>
-                                                    <button className='btn btn-danger btn-sm' style={{width:"45%"}} value={data._id}>Delete</button>
+                                                    <Link to={'/EditSeller/'+data._id}><button className='btn btn-warning btn-sm' style={{color:"#fff",marginRight:"3px",width:"45%"}} value={data._id}>Edit</button></Link>
+                                                    <button type='button' onClick={(e) => this.deleteSeller(data._id)} className='btn btn-danger btn-sm' style={{width:"45%"}} value={data._id}>Delete</button>
                                                 </form>
                                             </td>
                                         </tr>
