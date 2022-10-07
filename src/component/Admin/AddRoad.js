@@ -22,7 +22,7 @@ class AddRoad extends React.Component{
         }
 
         console.log(formData);
-        axios.post(`http://localhost:8000/road/addRoad`, formData)
+        axios.post(`https://tea-collector-api.herokuapp.com/road/addRoad`, formData)
         .then(res => {
             console.log(res.data);
             if(res.data.result === 1){

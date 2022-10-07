@@ -28,7 +28,7 @@ class EditRoad extends React.Component{
             obID : this.id
         }
 
-        axios.post("http://localhost:8000/road/getRoadbyId",dataSend)
+        axios.post("https://tea-collector-api.herokuapp.com/road/getRoadbyId",dataSend)
         .then(data => this.setRoad(data.data))
         .catch(error => console.log(error));
         
@@ -45,7 +45,7 @@ class EditRoad extends React.Component{
         }
 
         console.log(formData);
-        axios.post(`http://localhost:8000/road/updateRoadbyId`, formData)
+        axios.post(`https://tea-collector-api.herokuapp.com/road/updateRoadbyId`, formData)
         .then(res => {
             console.log(res.data);
             if(res.data.result === 1){

@@ -4,7 +4,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import AdminSidebar from '../AdminSidebar';
 import '../../css/sidebar.css';
 import '../../css/admin.css';
-import axios from "./../../axios-instance";
+import axios from 'axios';
 
 class AdminDashboard extends React.Component{
     constructor(props){
@@ -21,7 +21,7 @@ class AdminDashboard extends React.Component{
     }
 
     componentDidMount(){
-        axios.get("./getLorry")
+        axios.get("https://tea-collector-api.herokuapp.com/road/getLorry")
         .then(data => this.getLorry(data.data))
         .catch(error => console.log(error));
         
