@@ -45,7 +45,7 @@ export default function AddSelling() {
         <br />
         <input
           type="text"
-          placeholder="Tea picker’s Name"
+          placeholder="Tea seller’s Name"
           className="formInput"
           onChange={(e) => {
             setname(e.target.value);
