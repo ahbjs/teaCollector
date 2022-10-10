@@ -83,9 +83,9 @@ export default function WebBook() {
         <table>
           <thead className="table__header">
             <tr>
-              <th className="th__1">Tea Picker's Name</th>
+              <th className="th__1">Tea Seller's Name</th>
               <th className="th__2">Date</th>
-              <th className="th__3">Ammount</th>
+              <th className="th__3">Amount</th>
               <th className="th__4">Lorry Number</th>
             </tr>
           </thead>
