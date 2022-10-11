@@ -145,6 +145,7 @@ router.get('/getRoadReport', async (req, res) => {
             </html>
             `;
 
+            
             let file = { content: table};
             html_to_pdf.generatePdf(file, options).then(pdfBuffer => {
                 fs.writeFileSync('./reports/road/report.pdf', pdfBuffer)
