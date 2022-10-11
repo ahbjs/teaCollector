@@ -148,7 +148,8 @@ router.get('/getRoadReport', async (req, res) => {
             let file = { content: table};
             html_to_pdf.generatePdf(file, options).then(pdfBuffer => {
                 fs.writeFileSync('./reports/road/report.pdf', pdfBuffer)
-                res.download('./reports/road/report.pdf');
+                //res.download('./reports/road/report.pdf');
+                res.json({"ahb":"ahb"});
             });
         }
     });
