@@ -116,9 +116,8 @@ export default function LorryManagement() {
         <td>{lorry.address}</td>
         <td>{lorry.nic}</td>
         <td>
-          <BrowserRouter forceRefresh={true}>
             <button
-              class="button-30"
+              className="button-30"
               onClick={() =>
                 sendData(
                   lorry.name,
@@ -131,7 +130,6 @@ export default function LorryManagement() {
             >
               Accept
             </button>
-          </BrowserRouter>
         </td>
       </tr>
     );
@@ -162,14 +160,14 @@ export default function LorryManagement() {
             Lorry details that registed by lorry owners
           </h3>
           <br />
-          <table class="table">
+          <table className="table">
             <tr>
-              <th class="table__heading">Name</th>
+              <th className="table__heading">Name</th>
 
-              <th class="table__heading">Vehicle Name</th>
-              <th class="table__heading">Vehicle Number</th>
-              <th class="table__heading">Address</th>
-              <th class="table__heading">NIC Number</th>
+              <th className="table__heading">Vehicle Name</th>
+              <th className="table__heading">Vehicle Number</th>
+              <th className="table__heading">Address</th>
+              <th className="table__heading">NIC Number</th>
             </tr>
             {lorry
               .filter((val) => {
@@ -192,14 +190,14 @@ export default function LorryManagement() {
           </button>
           <br />
           <br />
-          <table ref={componentRef} class="table">
+          <table ref={componentRef} className="table">
             <tr>
-              <th class="table__heading">Name</th>
+              <th className="table__heading">Name</th>
 
-              <th class="table__heading">Vehicle Name</th>
-              <th class="table__heading">Vehicle Number</th>
-              <th class="table__heading">Address</th>
-              <th class="table__heading">NIC Number</th>
+              <th className="table__heading">Vehicle Name</th>
+              <th className="table__heading">Vehicle Number</th>
+              <th className="table__heading">Address</th>
+              <th className="table__heading">NIC Number</th>
             </tr>
             {lorryAccept
               .filter((val) => {

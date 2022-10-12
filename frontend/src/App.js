@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Register from "./pages/register page/Register";
 import Login from "./pages/login page/Login";
 import PriceManagement from "./pages/priceManagement/priceManagement";
@@ -13,23 +13,31 @@ import LorryManagement from "./pages/lorryManagement/lorryManagement";
 function App() {
   return (
     <div>
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Register} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/admin" component={AdminDashboard} />
-          <Route exact path="/AddRoad" component={AddRoad} />
-          <Route exact path="/PriceManagement" component={PriceManagement} />
-          <Route exact path="/PriceList" component={PriceList} />
-          <Route exact path="/LorryManagement" component={LorryManagement} />
+      <main>
+          <Routes>
+            <Route path="/" element={<Register />} />
+            <Route path="/login" exact element={<Login />} />
+            <Route path="/admin" exact element={<AdminDashboard />} />
+            <Route path="/AddRoad" exact element={<AddRoad />} />
+            <Route
+              path="/PriceManagement"
+              exact
+              element={<PriceManagement />}
+            />
+            <Route path="/PriceList" exact element={<PriceList />} />
+            <Route
+              path="/LorryManagement"
+              exact
+              element={<LorryManagement />}
+            />
 
-          <Route
-            exact
-            path="/PriceList/update/:sellerID"
-            component={UpdatePrice}
-          />
-        </Switch>
-      </Router>
+            <Route
+              exact
+              path="/PriceList/update/:sellerID"
+              element={<UpdatePrice />}
+            />
+          </Routes>
+      </main>
     </div>
   );
 }

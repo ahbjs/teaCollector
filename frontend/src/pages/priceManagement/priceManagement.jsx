@@ -146,30 +146,28 @@ export default function PriceManagement() {
         <hr className="hori"></hr>
         <p className="root"> Home / Price Management</p>
         <br />
-        < BrowserRouter forceRefresh={true}>
         <Link to="/PriceList">
           <button className="button-38">View Price List</button>
         </Link>
-        </BrowserRouter>
         <div className="table1">
           <h3 className="tabelTopic">Tea Collect Details</h3>
           <h3 className="tableDis">Salers tea collecting details</h3>
           <br />
           <input
             placeholder="search seller ID"
-            class="search__input"
+            className="search__input"
             type="text"
             onChange={(event) => setsearch(event.target.value)}
           />
           <br />
           <br />
-          <table class="table">
+          <table className="table">
             <tr>
-              <th class="table__heading">SellerID</th>
-              <th class="table__heading">Address</th>
-              <th class="table__heading">Tea Weight (per 1KG)</th>
-              <th class="table__heading">Wet Weight (per 1KG)</th>
-              <th class="table__heading">Date</th>
+              <th className="table__heading">SellerID</th>
+              <th className="table__heading">Address</th>
+              <th className="table__heading">Tea Weight (per 1KG)</th>
+              <th className="table__heading">Wet Weight (per 1KG)</th>
+              <th className="table__heading">Date</th>
             </tr>
             {sale
               .filter((val) => {
@@ -187,14 +185,14 @@ export default function PriceManagement() {
           <br />
         </div>
         <form onSubmit={sendData}>
-          <div class="form__group">
-            <p class="formName">Add Tea Price</p>
+          <div className="form__group">
+            <p className="formName">Add Tea Price</p>
             <br />
             <br />
-            <p class="formdes">Add seller details and add price</p>
+            <p className="formdes">Add seller details and add price</p>
             <input
               type="text"
-              class="form__input1"
+              className="form__input1"
               placeholder="Seller ID"
               onChange={(e) => {
                 setsellerID(e.target.value);
@@ -215,7 +213,7 @@ export default function PriceManagement() {
 
             <input
               type="text"
-              class="form__input"
+              className="form__input"
               placeholder="Tea Weight"
               onChange={(e) => {
                 setteaWeight(e.target.value);
@@ -230,7 +228,7 @@ export default function PriceManagement() {
             <br />
             <input
               type="text"
-              class="form__input"
+              className="form__input"
               placeholder="Wet Weight"
               onChange={(e) => {
                 setwetWeight(e.target.value);
@@ -245,7 +243,7 @@ export default function PriceManagement() {
             <br />
             <input
               type="text"
-              class="form__input"
+              className="form__input"
               placeholder="Price per 1KG"
               onChange={(e) => {
                 setprice(e.target.value);
@@ -258,7 +256,7 @@ export default function PriceManagement() {
             <br />
             <input
               type="date"
-              class="form__input"
+              className="form__input"
               placeholder="Date"
               onChange={(e) => {
                 setdate(e.target.value);
@@ -269,13 +267,13 @@ export default function PriceManagement() {
             <br />
             <div style={{ color: "red", marginLeft: "80px" }}>{dateError}</div>
             <br />
-            <button type="submit" class="button-33">
+            <button type="submit" className="button-33">
               Submit
             </button>
             <br />
             <br />
 
-            <hr class="hori2"></hr>
+            <hr className="hori2"></hr>
           </div>
         </form>
       </div>

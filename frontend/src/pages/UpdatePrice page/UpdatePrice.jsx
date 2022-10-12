@@ -71,14 +71,14 @@ export default function UpdatePrice(props) {
         <br />
         <br />
         <form onSubmit={sendData}>
-          <div class="form__group_Update">
-            <p class="formName">Update Tea Price</p>
+          <div className="form__group_Update">
+            <p className="formName">Update Tea Price</p>
             <br />
             <br />
-            <p class="formdes">Update Sale details and tea prices</p>
+            <p className="formdes">Update Sale details and tea prices</p>
             <input
               type="text"
-              class="form__input1"
+              className="form__input1"
               placeholder="Seller ID"
               value={sellerID}
               onChange={(e) => {
@@ -95,7 +95,7 @@ export default function UpdatePrice(props) {
 
             <input
               type="text"
-              class="form__input"
+              className="form__input"
               placeholder="Tea Weight"
               value={teaWeight}
               onChange={(e) => {
@@ -107,7 +107,7 @@ export default function UpdatePrice(props) {
             <br />
             <input
               type="text"
-              class="form__input"
+              className="form__input"
               placeholder="Wet Weight"
               value={wetWeight}
               onChange={(e) => {
@@ -119,7 +119,7 @@ export default function UpdatePrice(props) {
             <br />
             <input
               type="text"
-              class="form__input"
+              className="form__input"
               placeholder="Price per 1KG"
               value={price}
               onChange={(e) => {
@@ -131,7 +131,7 @@ export default function UpdatePrice(props) {
             <br />
             <input
               type="date"
-              class="form__input"
+              className="form__input"
               placeholder="Date"
               value={date}
               onChange={(e) => {
@@ -141,13 +141,13 @@ export default function UpdatePrice(props) {
             <br />
             <br />
             <br />
-            <button type="submit" class="button-33">
+            <button type="submit" className="button-33">
               Submit
             </button>
             <br />
             <br />
 
-            <hr class="hori2"></hr>
+            <hr className="hori2"></hr>
           </div>
         </form>
       </div>

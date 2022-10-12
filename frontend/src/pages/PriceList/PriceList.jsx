@@ -82,15 +82,15 @@ export default function PriceList() {
           <h3 className="tabelTopic">Tea Price List</h3>
           <h3 className="tableDis">Salers tea details with total prices</h3>
           <br/>
-          <table class="table">
+          <table className="table">
             <tr>
-              <th class="table__heading">SellerID</th>
+              <th className="table__heading">SellerID</th>
 
-              <th class="table__heading">Tea Weight (per 1KG)</th>
-              <th class="table__heading">Wet Weight (per 1KG)</th>
-              <th class="table__heading">Date</th>
-              <th class="table__heading">Total Price</th>
-              <th class="table__heading">Action</th>
+              <th className="table__heading">Tea Weight (per 1KG)</th>
+              <th className="table__heading">Wet Weight (per 1KG)</th>
+              <th className="table__heading">Date</th>
+              <th className="table__heading">Total Price</th>
+              <th className="table__heading">Action</th>
             </tr>
             {prices
               .filter((val) => {

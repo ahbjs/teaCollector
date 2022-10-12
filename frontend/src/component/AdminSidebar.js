@@ -36,20 +36,16 @@ class AdminSidebar extends React.Component {
             </Link>
           </li>
           <li>
-            <BrowserRouter forceRefresh={true}>
               <Link to="/LorryManagement" class="nav-link link-dark">
                 <i class="bi me-2 fa fa-truck" width="16" height="16"></i>
                 Lorry Management
               </Link>
-            </BrowserRouter>
           </li>
           <li>
-            <BrowserRouter forceRefresh={true}>
               <Link to="/PriceManagement" class="nav-link link-dark">
                 <i class="bi me-2 fa fa-usd" width="16" height="16"></i>
                 Price Management
               </Link>
-            </BrowserRouter>
           </li>
           <li>
             <a href="#" class="nav-link link-dark">

@@ -97,11 +97,9 @@ export default function Register() {
 
           <p style={{marginLeft:"50px"}}>
             <span>If you already registed click </span>
-            <BrowserRouter forceRefresh={true}>
               <Link to="/login">
                 <a>login</a>
               </Link>
-            </BrowserRouter>
           </p>
         </form>
       </div>

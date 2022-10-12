@@ -2,11 +2,10 @@ import React, { useState, useEffect} from "react";
 import axios from "axios";
 import "./Login.css";
 import img2 from "../../images/img2.jpg";
-import { BrowserRouter,Link, useHistory } from "react-router-dom";
+import { BrowserRouter,Link} from "react-router-dom";
 
 export default function Login() {
 
-  let history = useHistory();
 
   const[Eemail,setEemail] = useState("");
   const[Epassword,setEpassword] = useState("");
@@ -44,25 +43,25 @@ export default function Login() {
 
 
 
-  useEffect(() => {
-    getResults();
-  }, []);
+  // useEffect(() => {
+  //   getResults();
+  // }, []);
 
-  function getResults() {
-    let mounted = true;
-    fetch(`http://localhost:5000/user/get/${Eemail},${Epassword}`)
-      .then((res) => res.json())
-      .then((result) => {
-        if (mounted) {
-          setemail(result[0].email);
-          setpassword(result[0].password);
-          console.log(Eemail);
+  // function getResults() {
+  //   let mounted = true;
+  //   fetch(`http://localhost:5000/user/get/${Eemail},${Epassword}`)
+  //     .then((res) => res.json())
+  //     .then((result) => {
+  //       if (mounted) {
+  //         setemail(result[0].email);
+  //         setpassword(result[0].password);
+  //         console.log(Eemail);
 
-          console.log(result);
-        }
-      });
-    return () => (mounted = false);
-  }
+  //         console.log(result);
+  //       }
+  //     });
+  //   return () => (mounted = false);
+  // }
 
     
 
@@ -111,11 +110,9 @@ export default function Login() {
           <br />
           <br />
           <br />
-          <BrowserRouter forceRefresh={true}>
             <Link to="/admin">
               <button className="button-3">Login</button>
             </Link>
-          </BrowserRouter>
         </form>
       </div>
     </div>
