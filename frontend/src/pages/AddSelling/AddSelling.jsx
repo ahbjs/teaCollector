@@ -175,9 +175,9 @@ export default function AddSelling() {
         <br />
         <br />
         <button className="button-33">Confirm</button>
-        
+        <button className="button-77">Reset</button>
       </form>
-      <button className="button-77">Reset</button>
+      
       <Footer />
     </div>
   );
