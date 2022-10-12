@@ -1,3 +1,13 @@
+
+import logo from "./logo.svg";
+import "./App.css";
+import Register from "./pages/register page/Register";
+import Login from "./pages/login page/Login";
+import PriceManagement from "./pages/priceManagement/priceManagement";
+import PriceList from "./pages/PriceList/PriceList";
+import UpdatePrice from "./pages/UpdatePrice page/UpdatePrice";
+import LorryManagement from "./pages/lorryManagement/lorryManagement";
+
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -15,12 +25,17 @@ import ViewSeller from './component/Seller/ViewSeller';
 
 import EditSeller from './component/Seller/EditSeller';
 
+
 function App() {
   return (
-  <Router>
     <div>
+      <main>
+          <Routes>
+
+          </Routes>
+      </main>
+
       <Routes>
-        <Route exact path="/" element={<AddSeller/>} />
         <Route exact path="/AdminDashboard" element={<AdminDashboard/>} />
         <Route exact path="/RoadManagement" element={<RoadManagement/>} />
         <Route exact path="/AddRoad" element={<AddRoad/>} />
@@ -31,9 +46,30 @@ function App() {
 
         <Route exact path="/EditRoad/:id" element={<EditRoad/>} />
 
+        <Route path="/" element={<Register />} />
+            <Route path="/login" exact element={<Login />} />
+            <Route path="/admin" exact element={<AdminDashboard />} />
+            <Route path="/AddRoad" exact element={<AddRoad />} />
+            <Route
+              path="/PriceManagement"
+              exact
+              element={<PriceManagement />}
+            />
+            <Route path="/PriceList" exact element={<PriceList />} />
+            <Route
+              path="/LorryManagement"
+              exact
+              element={<LorryManagement />}
+            />
+
+            <Route
+              exact
+              path="/PriceList/update/:sellerID"
+              element={<UpdatePrice />}
+            />
+
       </Routes>
     </div>
-  </Router>
   );
 }
 
