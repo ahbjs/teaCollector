@@ -8,6 +8,7 @@ import {
 import AdminDashboard from './component/Admin/AdminDashboard';
 import RoadManagement from './component/Admin/RoadManagement';
 import AddRoad from './component/Admin/AddRoad';
+import EditRoad from './component/Admin/EditRoad';
 
 import AddSeller from './component/Seller/AddSeller';
 import ViewSeller from './component/Seller/ViewSeller';
