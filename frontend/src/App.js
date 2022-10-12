@@ -2,11 +2,11 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Register from "./pages/register page/Register";
-import Login from "./pages/login page/Login";
 import PriceManagement from "./pages/priceManagement/priceManagement";
 import PriceList from "./pages/PriceList/PriceList";
 import UpdatePrice from "./pages/UpdatePrice page/UpdatePrice";
 import LorryManagement from "./pages/lorryManagement/lorryManagement";
+import Login from "./pages/login page/Login";
 
 import './App.css';
 import {
@@ -45,8 +45,9 @@ function App() {
         <Route exact path="/EditSeller/:id" element={<EditSeller/>} />
 
         <Route exact path="/EditRoad/:id" element={<EditRoad/>} />
+        <Route path="/" exact element={<Login />} />
 
-        <Route path="/" element={<Register />} />
+        <Route path="/register" element={<Register />} />
             <Route path="/login" exact element={<Login />} />
             <Route path="/admin" exact element={<AdminDashboard />} />
             <Route path="/AddRoad" exact element={<AddRoad />} />

@@ -23,14 +23,14 @@ class ViewSeller extends React.Component{
     }
 
     componentDidMount(){
-        axios.post("http://localhost:8000/teaCollection/getSellers")
+        axios.post("https://tea-collector-api.herokuapp.com/teaCollection/getSellers")
         .then(data => this.setSellers(data.data))
         .catch(error => console.log(error));
         
     }
 
     loadSellers(){
-        axios.post("http://localhost:8000/teaCollection/getSellers")
+        axios.post("https://tea-collector-api.herokuapp.com/teaCollection/getSellers")
         .then(data => this.setSellers(data.data))
         .catch(error => console.log(error));
     }
@@ -40,7 +40,7 @@ class ViewSeller extends React.Component{
             obID : id
         }
 
-        axios.post("http://localhost:8000/teaCollection/deleteSellerbyId",dataSend)
+        axios.post("https://tea-collector-api.herokuapp.com/teaCollection/deleteSellerbyId",dataSend)
         .then(data => this.loadSellers())
         .catch(error => console.log(error));
     }

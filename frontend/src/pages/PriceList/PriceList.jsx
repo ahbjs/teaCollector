@@ -19,7 +19,7 @@ export default function PriceList() {
 
     function onDelete(sellerID) {
       axios
-        .delete(`http://localhost:5000/teaPrice/delete/${sellerID}`)
+        .delete(`https://tea-collector-api.herokuapp.com/teaPrice/delete/${sellerID}`)
         .then((res) => {
           console.log(res.data.sellerID);
           alert("Deleted Price");
@@ -32,7 +32,7 @@ export default function PriceList() {
   useEffect(() => {
     function getprices() {
       axios
-        .get("http://localhost:5000/teaPrice/get")
+        .get("https://tea-collector-api.herokuapp.com/teaPrice/get")
         .then((res) => {
           // console.log(res);
           setprices(res.data);

@@ -4,14 +4,10 @@ import "./Login.css";
 import img2 from "../../images/img2.jpg";
 import { BrowserRouter,Link} from "react-router-dom";
 
-export default function Login() {
-
-
-  const[Eemail,setEemail] = useState("");
-  const[Epassword,setEpassword] = useState("");
-
-    const [email, setemail] = useState("");
-    const [password, setpassword] = useState("");
+class Login extends React.Component{
+  constructor(props){
+    super(props);
+  }
 
   // const [user, setuser] = useState([
   //   {
@@ -27,7 +23,7 @@ export default function Login() {
     //   function CheckUser() {
     //     console.log(Eemail);
     //     axios
-    //       .get(`http://localhost:5000/user/get/${Eemail},${Epassword}`)
+    //       .get(`https://tea-collector-api.herokuapp.com/user/get/${Eemail},${Epassword}`)
     //       .then((res) => {
     //         console.log(res);
     //         setuser(res.data);
@@ -49,7 +45,7 @@ export default function Login() {
 
   // function getResults() {
   //   let mounted = true;
-  //   fetch(`http://localhost:5000/user/get/${Eemail},${Epassword}`)
+  //   fetch(`https://tea-collector-api.herokuapp.com/user/get/${Eemail},${Epassword}`)
   //     .then((res) => res.json())
   //     .then((result) => {
   //       if (mounted) {
@@ -77,15 +73,39 @@ export default function Login() {
     // }
 
 
-    
+    login(event){
+      event.preventDefault();
+
+      var formData = {
+          email : event.target.email.value,
+          psw : event.target.psw.value
+      }
+
+      console.log(formData);
+      axios.post(`https://tea-collector-api.herokuapp.com/users/getUserByEmail`, formData)
+      .then(res => {
+        if(res.data.role == "Admin"){
+          document.getElementById("admin").click();
+        }else if(res.data.role == "Tea seller"){
+          
+        }else if(res.data.role == "Lorry owner"){
+          document.getElementById("seller").click();
+        }else{
+          alert("Cannot find the account!");
+        }
+          console.log(res.data.role);
+          
+      })
+  }
 
   
 
+  render(){
   return (
     <div>
       <div className="main">
         <img className="sideImage" src={img2} />
-        <form className="registerForm">
+        <form className="registerForm" method="POST" onSubmit={(e) => this.login(e)}>
           <h1 className="SignUpText">Sign In</h1>
           <br />
           <br />
@@ -95,7 +115,8 @@ export default function Login() {
           <input
             placeholder="Email"
             className="input"
-            onChange={(event) => setEemail(event.target.value)}
+            id="email"
+            name="email"
           />
           <br />
           <br />
@@ -105,16 +126,27 @@ export default function Login() {
             type="password"
             placeholder="password"
             className="input-password"
-            onChange={(event) => setEpassword(event.target.value)}
+            id="psw"
+            name="psw"
           />
           <br />
           <br />
           <br />
-            <Link to="/admin">
-              <button className="button-3">Login</button>
-            </Link>
+
+              <button type="submit" className="button-3">Login</button>
+              <p>
+            <span>Don't have an account? let's </span>
+              <Link to="/register">
+                <a>Create Account</a>
+              </Link>
+          </p>
+           <Link to={"../admin"} id="admin" hidden>admin</Link>
+           <Link to={"../viewSellers"} id="seller" hidden>driver</Link>
         </form>
       </div>
     </div>
   );
+  }
 }
+
+export default Login;

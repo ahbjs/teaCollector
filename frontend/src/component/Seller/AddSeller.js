@@ -23,7 +23,7 @@ class AddSeller extends React.Component{
         }
 
         console.log(formData);
-        axios.post(`http://localhost:8000/teaCollection/addSeller`, formData)
+        axios.post(`https://tea-collector-api.herokuapp.com/teaCollection/addSeller`, formData)
         .then(res => {
             console.log(res.data);
             if(res.data.result === 1){

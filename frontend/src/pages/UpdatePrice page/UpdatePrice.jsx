@@ -20,7 +20,7 @@ export default function UpdatePrice(props) {
 
   function getResults() {
     let mounted = true;
-    fetch(`http://localhost:5000/teaPrice/get/${id}`)
+    fetch(`https://tea-collector-api.herokuapp.com/teaPrice/get/${id}`)
       .then((res) => res.json())
       .then((result) => {
         if (mounted) {
@@ -50,7 +50,7 @@ export default function UpdatePrice(props) {
     };
 
     axios
-      .put(`http://localhost:5000/teaPrice/update/${sellerID}`, UpdateSale)
+      .put(`https://tea-collector-api.herokuapp.com/teaPrice/update/${sellerID}`, UpdateSale)
       .then(() => {
         alert("Updated new details");
       })

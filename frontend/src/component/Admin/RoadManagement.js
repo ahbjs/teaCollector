@@ -29,7 +29,7 @@ class RoadManagement extends React.Component{
     }
 
     loadRoads(){
-        axios.post("http://localhost:8000/road/getRoads")
+        axios.post("https://tea-collector-api.herokuapp.com/road/getRoads")
         .then(data => this.setRoads(data.data))
         .catch(error => console.log(error));
     }
@@ -39,13 +39,13 @@ class RoadManagement extends React.Component{
             obID : id
         }
 
-        axios.post("http://localhost:8000/road/deleteRoadbyId",dataSend)
+        axios.post("https://tea-collector-api.herokuapp.com/road/deleteRoadbyId",dataSend)
         .then(data => this.loadRoads())
         .catch(error => console.log(error));
     }
 
     getReport(){
-        axios.post("http://localhost:8000/road/getRoadReport")
+        axios.post("https://tea-collector-api.herokuapp.com/road/getRoadReport")
         .then(data => alert("ahb"))
         .catch(error => console.log(error));
         
@@ -60,7 +60,7 @@ class RoadManagement extends React.Component{
                     <AdminSidebar />
                     <div className='col-lg-12 m-5'>
                         <h1>Road Management</h1>
-                        <a href='http://localhost:8000/road/getRoadReport'><button type='button' onClick={this.getReport} target='_blank'>Report</button></a>
+                        <a href='https://tea-collector-api.herokuapp.com/road/getRoadReport'><button type='button' className='btn btn-info mb-3' onClick={this.getReport} target='_blank'>Generate Report</button></a><br/>
                         <div className='bg-light table-shape' style={{width: "72%"}}>
                             <div className='col-lg-12'>
                                 <div className='row'>

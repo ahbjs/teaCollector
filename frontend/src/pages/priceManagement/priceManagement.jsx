@@ -87,7 +87,7 @@ export default function PriceManagement() {
       };
 
       axios
-        .post("http://localhost:5000/teaPrice/add", NewSale)
+        .post("https://tea-collector-api.herokuapp.com/teaPrice/add", NewSale)
         .then(() => {
           alert("New Price Added");
         })
@@ -112,7 +112,7 @@ export default function PriceManagement() {
   useEffect(() => {
     function getsales() {
       axios
-        .get("http://localhost:5000/teaCollect/")
+        .get("https://tea-collector-api.herokuapp.com/teaCollect/")
         .then((res) => {
           console.log(res);
           setsale(res.data);

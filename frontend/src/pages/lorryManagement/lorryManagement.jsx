@@ -36,7 +36,7 @@ export default function LorryManagement() {
 
   function sendData(name, vehicle, vehicleNo, address, nic) {
     axios
-      .delete(`http://localhost:5000/lorry/delete/${nic}`)
+      .delete(`https://tea-collector-api.herokuapp.com/lorry/delete/${nic}`)
       .then((res) => {
         alert("Lorry Deleted");
       })
@@ -52,7 +52,7 @@ export default function LorryManagement() {
       nic,
     };
     axios
-      .post("http://localhost:5000/lorryAccept/add", AcceptLorry)
+      .post("https://tea-collector-api.herokuapp.com/lorryAccept/add", AcceptLorry)
       .then(() => {
         alert("Lorry Accepted");
       })
@@ -63,7 +63,7 @@ export default function LorryManagement() {
 
   //   function onDelete(sellerID) {
   //     axios
-  //       .delete(`http://localhost:5000/teaPrice/delete/${sellerID}`)
+  //       .delete(`https://tea-collector-api.herokuapp.com/teaPrice/delete/${sellerID}`)
   //       .then((res) => {
   //         console.log(res.data.sellerID);
   //         alert("Deleted Price");
@@ -76,7 +76,7 @@ export default function LorryManagement() {
   useEffect(() => {
     function getlorryAccept() {
       axios
-        .get("http://localhost:5000/lorryAccept/get")
+        .get("https://tea-collector-api.herokuapp.com/lorryAccept/get")
         .then((res) => {
           // console.log(res);
           setlorryAccept(res.data);
@@ -93,7 +93,7 @@ export default function LorryManagement() {
   useEffect(() => {
     function getlorry() {
       axios
-        .get("http://localhost:5000/lorry/get")
+        .get("https://tea-collector-api.herokuapp.com/lorry/get")
         .then((res) => {
           // console.log(res);
           setlorry(res.data);
