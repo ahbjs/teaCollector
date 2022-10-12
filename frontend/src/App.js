@@ -13,7 +13,6 @@ import EditRoad from './component/Admin/EditRoad';
 import AddSeller from './component/Seller/AddSeller';
 import ViewSeller from './component/Seller/ViewSeller';
 
-import EditRoad from './component/Admin/EditRoad';
 import EditSeller from './component/Seller/EditSeller';
 
 function App() {
