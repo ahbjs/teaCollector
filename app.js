@@ -12,7 +12,11 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var lorry = require('./routes/lorry');
 var road = require('./routes/road');
+
+var teaCollection = require('./routes/teaCollection');
+
 var download = require('./routes/download');
+
 
 var mongoose = require("mongoose");
 require("dotenv").config();
@@ -30,11 +34,20 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/lorry', lorry);
 app.use('/road', road);
+
+
+app.use("/user", require("./routes/user.routes"));
+app.use("/teaCollect", require("./routes/teaCollect.routes"));
+app.use("/teaPrice", require("./routes/teaPrice.router"));
+app.use("/lorry", require("./routes/lorry.routes"));
+app.use("/lorryAccept", require("./routes/lorryAccept.routes"));
+
+app.use('/teaCollection',teaCollection);
+
 app.use('/download', download);
 
 // catch 404 and forward to error handler

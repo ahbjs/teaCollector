@@ -126,7 +126,7 @@ router.get('/getRoadReport', async (req, res) => {
             </head>
             <body>
             <div style="text-align: center;">
-                <img src="http://localhost:8000/download/downloadLogo" alt="logo" width="80" height="80">
+                <img src="https://tea-collector-api.herokuapp.com/download/downloadLogo" alt="logo" width="80" height="80">
                 <h3 class="fs-4" style="color: rgb(9, 180, 77); font-weight: bold;padding:0px;margin:0px;">Tea Collector</h3> 
             </div>
 
@@ -145,7 +145,6 @@ router.get('/getRoadReport', async (req, res) => {
             </html>
             `;
 
-            
             let file = { content: table};
             html_to_pdf.generatePdf(file, options).then(pdfBuffer => {
                 fs.writeFileSync('./reports/road/report.pdf', pdfBuffer)
@@ -156,6 +155,7 @@ router.get('/getRoadReport', async (req, res) => {
 
     
 });
+
 
 async function myFunction() {
     lorryRoadModel.distinct("lorryID"),async function (err, data) {
