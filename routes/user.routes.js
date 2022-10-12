@@ -1,7 +1,7 @@
 const express = require("express");
 
 const user = require("../api/user.api");
-const User = require("../../backend/model/user.model.js")
+const User = require("../model/user.model.js")
 
 const router = express.Router();
 
