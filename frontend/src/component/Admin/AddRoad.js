@@ -10,7 +10,25 @@ class AddRoad extends React.Component{
       super(props);
       this.state = {apiResponse:[]};
     }
-  
+
+    addRoad(event){
+        event.preventDefault();
+
+        var formData = {
+            lorryID : event.target.truck.value,
+            roadName : event.target.road.value,
+            date : event.target.date.value
+        }
+
+        console.log(formData);
+        axios.post(`http://localhost:8000/road/addRoad`, formData)
+        .then(res => {
+            console.log(res.data);
+            if(res.data.result === 1){
+                alert("A new road has been added!");
+            }
+        })
+    }
     render(){
 
         return (
