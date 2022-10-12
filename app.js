@@ -68,7 +68,7 @@ app.use(function(err, req, res, next) {
 
 mongoose.connection.once('open', () => {
   console.log("Connected to mongoDB");
-  app.listen(8000, function() {
+  app.listen(process.env.PORT || 8000, function() {
     console.log('Backend is running on http://localhost:8000');
   });
 })
