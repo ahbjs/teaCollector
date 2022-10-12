@@ -156,6 +156,7 @@ router.get('/getRoadReport', async (req, res) => {
     
 });
 
+
 async function myFunction() {
     lorryRoadModel.distinct("lorryID"),async function (err, data) {
         console.log(data);
