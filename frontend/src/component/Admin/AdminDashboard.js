@@ -4,27 +4,11 @@ import 'font-awesome/css/font-awesome.min.css';
 import AdminSidebar from '../AdminSidebar';
 import '../../css/sidebar.css';
 import '../../css/admin.css';
-import axios from "axios";
 
 class AdminDashboard extends React.Component{
     constructor(props){
       super(props);
       this.state = {apiResponse:[]};
-      this.getLorry = this.getLorry.bind(this);
-    }
-
-    getLorry(data){
-        this.setState({
-            apiResponse : data
-        });
-        console.log(this.state.apiResponse);
-    }
-
-    componentDidMount(){
-        axios.get("http://localhost:8000/lorry/getLorry")
-        .then(data => this.getLorry(data.data))
-        .catch(error => console.log(error));
-        
     }
   
     render(){
@@ -46,17 +30,13 @@ class AdminDashboard extends React.Component{
                                     <th>Address</th>
                                     <th>NIC Number</th>
                                 </tr>
-                                {this.state.apiResponse.map(data => {
-                                    return(
-                                        <tr>
-                                            <td>{data.Name}</td>
-                                            <td>{data.VehicleName}</td>
-                                            <td>{data.VehicleNumber}</td>
-                                            <td>{data.Address}</td>
-                                            <td>{data.NIC}</td>
-                                        </tr>
-                                    )
-                                })}
+                                <tr>
+                                    <td>ahb</td>
+                                    <td>ahb</td>
+                                    <td>ahb</td>
+                                    <td>ahb</td>
+                                    <td>ahb</td>
+                                </tr>
                             </table>
                         </div>
 
