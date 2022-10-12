@@ -60,7 +60,7 @@ class RoadManagement extends React.Component{
                     <AdminSidebar />
                     <div className='col-lg-12 m-5'>
                         <h1>Road Management</h1>
-                        <a href='https://tea-collector-api.herokuapp.com/road/getRoadReport'><button type='button' onClick={this.getReport} target='_blank'>Report</button></a>
+                        <a href='https://tea-collector-api.herokuapp.com/road/getRoadReport'><button type='button' className='btn btn-info mb-3' onClick={this.getReport} target='_blank'>Generate Report</button></a><br/>
                         <div className='bg-light table-shape' style={{width: "72%"}}>
                             <div className='col-lg-12'>
                                 <div className='row'>

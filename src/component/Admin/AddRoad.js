@@ -9,9 +9,9 @@ import axios from 'axios';
 class AddRoad extends React.Component{
     constructor(props){
       super(props);
-      this.state = {road:[]};
+      this.state = {apiResponse:[]};
     }
-  
+
     addRoad(event){
         event.preventDefault();
 
@@ -30,7 +30,6 @@ class AddRoad extends React.Component{
             }
         })
     }
-
     render(){
 
         return (
@@ -46,13 +45,13 @@ class AddRoad extends React.Component{
                             <p className='h6 font-weight-light'>Please Fill Complete Full Form</p>
                             <form onSubmit={(e) => this.addRoad(e)}>
                                 <div class="form-group mt-4 mb-4">
-                                    <input type="text" class="form-control" name="truck" placeholder="Select truck by search"/>
+                                    <input type="text" class="form-control" id="truck" placeholder="Select truck by search"/>
                                 </div>
                                 <div class="form-group mt-4 mb-4">
-                                    <input type="text" class="form-control" name="road" placeholder="Enter Road Name"/>
+                                    <input type="text" class="form-control" id="road" placeholder="Enter Road Name"/>
                                 </div>
                                 <div class="form-group mt-4 mb-4">
-                                    <input type="date" class="form-control" name="date" placeholder="Select Date"/>
+                                    <input type="date" class="form-control" id="date" placeholder="Select Date"/>
                                 </div>
                                 <button type="submit" class="btn btn-primary w-100">Add Road</button>
                             </form>
