@@ -1,4 +1,4 @@
-const teaCollect = require("../model/teaCollect.model");
+const teaCollect = require("../models/teaCollect.model");
 
 const addTeaCollect = async (req, res) => {
   const sellerID = req.body.firstName;
