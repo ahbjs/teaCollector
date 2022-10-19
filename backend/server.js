@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
 
-const URL = process.env.MONGODB_URL;
+const URL = process.env.DATABASE_URI;
 
 mongoose.connect(URL, {
   // useCreateIndex: true,

@@ -19,7 +19,7 @@ export default function ContactUs() {
 
   function onDelete(phone) {
     axios
-      .delete(`http://localhost:5000/comment/delete/${phone}`)
+      .delete(`https://tea-collector-api.herokuapp.com/comment/delete/${phone}`)
       .then((res) => {
         console.log(res.data.phone);
         alert("Deleted Comment");
@@ -32,7 +32,7 @@ export default function ContactUs() {
   useEffect(() => {
     function getcomments() {
       axios
-        .get("http://localhost:5000/comment/get")
+        .get("https://tea-collector-api.herokuapp.com/comment/get")
         .then((res) => {
           console.log(res);
           setcomment(res.data);

@@ -71,7 +71,7 @@ export default function AddSelling() {
       };
 
       axios
-        .post("http://localhost:5000/selling/add", NewSale)
+        .post("https://tea-collector-api.herokuapp.com/selling/add", NewSale)
         .then(() => {
           alert("New Sale Added");
         })

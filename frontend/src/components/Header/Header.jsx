@@ -7,7 +7,7 @@ export default function Header(){
       <div>
         <img className="logo" src={logo_img} />
         <h1 className="header">Tea Collector</h1>
-        <div className="bar"></div>
+        <div className="bar">
           <Link to="/">
             <p className="navBarText">Home</p>
           </Link>
@@ -20,6 +20,10 @@ export default function Header(){
           <Link to="/contactus">
             <p className="navBarText4">Service Details</p>
           </Link>
+          <Link to="/login">
+            <p className="navBarText5">Login</p>
+          </Link>
+          </div>
       </div>
     );
 }

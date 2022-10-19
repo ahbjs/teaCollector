@@ -27,7 +27,7 @@ export default function WebBook() {
 
       function onDelete(lorryNumber) {
         axios
-          .delete(`http://localhost:5000/selling/delete/${lorryNumber}`)
+          .delete(`https://tea-collector-api.herokuapp.com/selling/delete/${lorryNumber}`)
           .then((res) => {
             console.log(res.data.lorryNumber);
             alert("Deleted Selling");
@@ -40,7 +40,7 @@ export default function WebBook() {
   useEffect(() => {
     function getsales() {
       axios
-        .get("http://localhost:5000/selling/get")
+        .get("https://tea-collector-api.herokuapp.com/selling/get")
         .then((res) => {
           console.log(res);
           setsale(res.data);

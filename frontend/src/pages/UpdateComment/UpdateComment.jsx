@@ -19,7 +19,7 @@ export default function UpdateComment(props) {
 
   function getResults() {
     let mounted = true;
-    fetch(`http://localhost:5000/comment/get/${id}`)
+    fetch(`https://tea-collector-api.herokuapp.com/comment/get/${id}`)
       .then((res) => res.json())
       .then((result) => {
         if (mounted) {
@@ -43,7 +43,7 @@ export default function UpdateComment(props) {
     };
 
     axios
-      .put(`http://localhost:5000/comment/update/${phone}`, UpdateComment)
+      .put(`https://tea-collector-api.herokuapp.com/comment/update/${phone}`, UpdateComment)
       .then(() => {
         alert("Updated new details");
       })

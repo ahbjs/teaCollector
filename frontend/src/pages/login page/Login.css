@@ -1,0 +1,99 @@
+.main {
+  position: relative;
+  width: 1368px;
+  height: 655px;
+  background: #e8eae0;
+}
+
+.sideImage {
+  position: absolute;
+  height: 655px;
+  left: 0px;
+  top: 0px;
+}
+
+.registerForm {
+  position: absolute;
+  width: 339.63px;
+  height: 405.48px;
+  left: 747.91px;
+  top: 125px;
+}
+
+.SignUpText {
+  position: absolute;
+  width: 152px;
+  height: 59px;
+  left: 100px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 39.4593px;
+  line-height: 59px;
+
+  color: #42563d;
+}
+
+.input {
+  position: absolute;
+  width: 336.81px;
+  height: 38.05px;
+  border: 0.70463px solid #637A30;
+box-shadow: 0px 0px 7.0463px rgba(106, 100, 173, 0.1);
+border-radius: 2.81852px;
+
+  background: #d0f1dd;
+}
+
+.input-password{
+    position: absolute;
+  width: 336.81px;
+  height: 38.05px;
+
+  background: #F1F3E6;
+border: 0.70463px solid #637A30;
+box-shadow: 0px 0px 7.0463px rgba(106, 100, 173, 0.1);
+border-radius: 2.81852px;
+}
+
+.button-3 {
+    left: 100px;
+    width: 150px;
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}

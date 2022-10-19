@@ -52,7 +52,7 @@ export default function AddMessage() {
       };
 
       axios
-        .post("http://localhost:5000/comment/add", NewComment)
+        .post("https://tea-collector-api.herokuapp.com/comment/add", NewComment)
         .then(() => {
           alert("New Comment Added");
         })

@@ -42,7 +42,7 @@ background: #09B44D;
 width: 55px;
 height: 23px;
 left: 19px;
-top: 125px;
+top: 25px;
 
 font-family: 'Inter';
 font-style: normal;
@@ -59,7 +59,7 @@ color: #000000;
     position: absolute;
 height: 23px;
 left: 136px;
-top: 125px;
+top: 25px;
 
 font-family: 'Inter';
 font-style: normal;
@@ -76,7 +76,7 @@ color: #000000;
     position: absolute;
 height: 23px;
 left: 277px;
-top: 125px;
+top: 25px;
 
 font-family: 'Inter';
 font-style: normal;
@@ -93,7 +93,24 @@ color: #000000;
     position: absolute;
 height: 23px;
 left: 422px;
-top: 125px;
+top: 25px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 19px;
+line-height: 23px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+.navBarText5{
+position: absolute;
+height: 23px;
+left: 600px;
+top: 25px;
 
 font-family: 'Inter';
 font-style: normal;
