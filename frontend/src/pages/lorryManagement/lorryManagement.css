@@ -1,0 +1,233 @@
+.divBackground {
+  position: absolute;
+  width: 100%;
+  height: 1200px;
+  background-color: #09b44d;
+}
+
+.maintext {
+  position: absolute;
+  width: 500px;
+  height: 39px;
+  left: 50px;
+  top: 13px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+.hori {
+  position: absolute;
+  width: 1256.63px;
+  height: 0px;
+  top: 80px;
+  left: 20px;
+
+  border: 1px solid #ffffff;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.root {
+  position: absolute;
+  width: 210px;
+  height: 19px;
+  left: 50px;
+  top: 85px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+.table1 {
+  position: absolute;
+  width: 1000px;
+  left: 186px;
+  top: 150px;
+
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.table2 {
+  position: absolute;
+  width: 1000px;
+  left: 35px;
+  top: 550px;
+
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+td,
+th {
+  padding: 8px;
+  padding: 0.5rem;
+}
+
+th {
+  text-align: left;
+  font-weight: 300;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+td {
+  font-family: "Avenir Next", "Segoe UI", "Lucida Grande", sans-serif;
+}
+
+.table {
+  width: 100%;
+  padding: 16px;
+  padding: 1rem;
+}
+
+.table__heading {
+  border-bottom: 2px solid #080808;
+}
+@media (max-width: 32rem) {
+  .table__heading {
+    display: none;
+  }
+  .table__content {
+    display: block;
+    padding: 0.5rem 0;
+  }
+  .table__row {
+    margin: 0.25rem 1rem;
+    padding: 0.5rem 0;
+    display: block;
+    border-bottom: 2px solid #ffc842;
+  }
+  .table__content:before {
+    content: attr(data-heading);
+    display: inline-block;
+    width: 5rem;
+    margin-right: 0.5rem;
+    color: #999;
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+.tabelTopic {
+  width: 237px;
+  height: 2px;
+  margin-left: 20px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  /* or 117% */
+
+  color: #212121;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.tableDis {
+  width: 500px;
+  height: 2px;
+  margin-left: 20px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 21px;
+  /* identical to box height, or 175% */
+
+  color: #b5b5c3;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* CSS */
+.button-30 {
+  width: 100px;
+  background-color: #c2fbd7;
+  border-radius: 6px;
+  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
+  color: #0047FF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-30:hover {
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(44, 187, 99, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.button-89 {
+  margin-left: 840px;
+  width: 150px;
+  background-color: #c2fbd7;
+  border-radius: 6px;
+  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
+  color: #cf0000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover {
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(44, 187, 99, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
