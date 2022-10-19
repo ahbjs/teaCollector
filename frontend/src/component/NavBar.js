@@ -45,7 +45,7 @@ class NavBar extends React.Component{
             <Link to={'/addSeller'} class="nav-link" style={{fontWeight:"bold"}} href="#">Add seller</Link>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" style={{fontWeight:"bold"}} href="#">Generate Report</a>
+            <a class="nav-link" style={{fontWeight:"bold"}} href="https://tea-collector-api.herokuapp.com/teaCollection/driverReport" target={'_blank'}>Generate Report</a>
         </li>
         </ul>
     </div>
