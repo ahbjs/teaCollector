@@ -87,9 +87,9 @@ class Login extends React.Component{
         if(res.data.role == "Admin"){
           document.getElementById("admin").click();
         }else if(res.data.role == "Tea seller"){
-          
-        }else if(res.data.role == "Lorry owner"){
           document.getElementById("seller").click();
+        }else if(res.data.role == "Lorry owner"){
+          document.getElementById("Lorry").click();
         }else{
           alert("Cannot find the account!");
         }
@@ -141,7 +141,8 @@ class Login extends React.Component{
               </Link>
           </p>
            <Link to={"../admin"} id="admin" hidden>admin</Link>
-           <Link to={"../viewSellers"} id="seller" hidden>driver</Link>
+           <Link to={"../viewSellers"} id="Lorry" hidden>driver</Link>
+           <Link to={"../webbook"} id="seller" hidden>seller</Link>
         </form>
       </div>
     </div>

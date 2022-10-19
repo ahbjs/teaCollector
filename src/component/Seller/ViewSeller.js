@@ -79,8 +79,8 @@ class ViewSeller extends React.Component{
                                             <td>{data.collectionDate}</td>
                                             <td>
                                                 <form>
-                                                    <Link to={'/EditSeller/'+data._id}><button className='btn btn-warning btn-sm' style={{color:"#fff",marginRight:"3px",width:"45%"}} value={data._id}>Edit</button></Link>
-                                                    <button type='button' onClick={(e) => this.deleteSeller(data._id)} className='btn btn-danger btn-sm' style={{width:"45%"}} value={data._id}>Delete</button>
+                                                    <Link to={'/EditSeller/'+data._id}><button className='btn btn-warning btn-sm' style={{color:"#fff",marginRight:"3px",width:"100%"}} value={data._id}>Edit</button></Link>
+                                                    <button type='button' onClick={(e) => this.deleteSeller(data._id)} className='btn btn-danger btn-sm w-100' value={data._id}>Delete</button>
                                                 </form>
                                             </td>
                                         </tr>
