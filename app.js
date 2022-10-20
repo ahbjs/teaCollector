@@ -41,6 +41,7 @@ app.use('/road', road);
 
 
 app.use("/user", require("./routes/user.routes"));
+app.use("/selling", require("./routes/Selling.routes"));
 app.use("/teaCollect", require("./routes/teaCollect.routes"));
 app.use("/teaPrice", require("./routes/teaPrice.router"));
 app.use("/lorry", require("./routes/lorry.routes"));
