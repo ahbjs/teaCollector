@@ -127,8 +127,8 @@ router.get("/getRoadReport", async (req, res) => {
 
       let file = { content: table };
       html_to_pdf.generatePdf(file, options).then((pdfBuffer) => {
-        fs.writeFileSync("../reports/accept/report.pdf", pdfBuffer);
-        res.download("../reports/accept/report.pdf");
+        fs.writeFileSync("./reports/accept/report.pdf", pdfBuffer);
+        res.download("./reports/accept/report.pdf");
       });
     }
   });
