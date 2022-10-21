@@ -1,17 +1,29 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./UpdatePrice.css";
+import { useParams } from "react-router-dom";
 import AdminSidebar from "../../component/AdminSidebar";
 
 export default function UpdatePrice(props) {
-  const id = props.match.params.sellerID;
-  console.log(id);
+  const id = useParams();
+  const ID = id.sellerID;
+  console.log(ID);
 
   const [sellerID, setsellerID] = useState("");
   const [teaWeight, setteaWeight] = useState("");
   const [wetWeight, setwetWeight] = useState("");
   const [price, setprice] = useState("");
   const [date, setdate] = useState("");
+
+  const [updatePrice, setupdatePrice] = useState([
+    {
+      sellerID: "",
+      teaWeight: "",
+      wetWeight: "",
+      price: "",
+      date: "",
+    },
+  ]);
 
   // get data
   useEffect(() => {
@@ -20,17 +32,16 @@ export default function UpdatePrice(props) {
 
   function getResults() {
     let mounted = true;
-    fetch(`http://localhost:8000/teaPrice/get/${id}`)
+    fetch(`http://localhost:8000/teaPrice/get/${ID}`)
       .then((res) => res.json())
       .then((result) => {
+        console.log(result);
         if (mounted) {
           setsellerID(result[0].sellerID);
           setteaWeight(result[0].teaWeight);
           setwetWeight(result[0].wetWeight);
           setprice(result[0].price);
           setdate(result[0].date);
-
-          // console.log(result);
         }
       });
     return () => (mounted = false);
