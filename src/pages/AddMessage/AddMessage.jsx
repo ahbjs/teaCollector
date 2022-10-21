@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Header from "../../components/Header/Header";
+import HeaderSelling from "../../components/Header/HeaderSelling";
 import Footer from "../../components/Footer/Footer";
 import img5 from "../../images/img5.png";
 
@@ -64,7 +64,7 @@ export default function AddMessage() {
 
   return (
     <div>
-      <Header />
+      <HeaderSelling />
       <img className="form-img" src={img5} />
       <form className="formAddSelling" onSubmit={sendData1}>
         <p className="formHeading2">Get In Touch</p>

@@ -55,7 +55,7 @@ export default function ContactUs() {
           <td className="td__2">{comment.subject}</td>
           <td className="td__3">{comment.message}</td>
           <td>
-              <Link to={`updateselling/${comment.phone}`}>
+              <Link to={`/updateselling/${comment.phone}`}>
                 <button className="button-18">Update</button>
               </Link>
 
