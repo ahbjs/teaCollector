@@ -9,6 +9,13 @@ import AdminSidebar from "../../component/AdminSidebar";
 export default function LorryManagement() {
   const [search, setsearch] = useState("");
 
+  function getReport() {
+    axios
+      .get("http://localhost:8000/lorryAccept/getRoadReport")
+      .then((data) => alert("Report Genarated"))
+      .catch((error) => console.log(error));
+  }
+
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
@@ -36,7 +43,7 @@ export default function LorryManagement() {
 
   function sendData(name, vehicle, vehicleNo, address, nic) {
     axios
-      .delete(`http://localhost:5000/lorry/delete/${nic}`)
+      .delete(`http://localhost:8000/lorry/delete/${nic}`)
       .then((res) => {
         alert("Lorry Deleted");
       })
@@ -52,7 +59,7 @@ export default function LorryManagement() {
       nic,
     };
     axios
-      .post("http://localhost:5000/lorryAccept/add", AcceptLorry)
+      .post("http://localhost:8000/lorryAccept/add", AcceptLorry)
       .then(() => {
         alert("Lorry Accepted");
       })
@@ -63,7 +70,7 @@ export default function LorryManagement() {
 
   //   function onDelete(sellerID) {
   //     axios
-  //       .delete(`http://localhost:5000/teaPrice/delete/${sellerID}`)
+  //       .delete(`http://localhost:8000/teaPrice/delete/${sellerID}`)
   //       .then((res) => {
   //         console.log(res.data.sellerID);
   //         alert("Deleted Price");
@@ -76,7 +83,7 @@ export default function LorryManagement() {
   useEffect(() => {
     function getlorryAccept() {
       axios
-        .get("http://localhost:5000/lorryAccept/get")
+        .get("http://localhost:8000/lorryAccept/get")
         .then((res) => {
           // console.log(res);
           setlorryAccept(res.data);
@@ -93,7 +100,7 @@ export default function LorryManagement() {
   useEffect(() => {
     function getlorry() {
       axios
-        .get("http://localhost:5000/lorry/get")
+        .get("http://localhost:8000/lorry/get")
         .then((res) => {
           // console.log(res);
           setlorry(res.data);
@@ -185,12 +192,14 @@ export default function LorryManagement() {
         <div className="table2">
           <h3 className="tabelTopic">Accepted Lorries</h3>
           <h3 className="tableDis">Accepted lorry details</h3>
-          <button class="button-89" onClick={handlePrint}>
-            Genarate report
-          </button>
+          <a href="http://localhost:8000/lorryAccept/getRoadReport">
+            <button class="button-89" onClick={getReport}>
+              Genarate report
+            </button>
+          </a>
           <br />
           <br />
-          <table ref={componentRef} className="table">
+          <table className="table">
             <tr>
               <th className="table__heading">Name</th>
 

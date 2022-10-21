@@ -13,10 +13,14 @@
     "debug": "~2.6.9",
     "dotenv": "^16.0.2",
     "express": "~4.16.1",
+    "html-pdf-node": "^1.0.8",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "mongoose": "^6.5.4",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "puppeteer": "^19.0.0"
   }
 }

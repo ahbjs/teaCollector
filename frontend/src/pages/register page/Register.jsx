@@ -23,7 +23,7 @@ export default function Register() {
     };
 
     axios
-      .post("http://localhost:5000/user/regiter", NewUser)
+      .post("http://localhost:8000/user/regiter", NewUser)
       .then(() => {
         alert("New User Added");
       })
