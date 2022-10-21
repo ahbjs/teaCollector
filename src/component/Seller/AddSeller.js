@@ -33,6 +33,14 @@ class AddSeller extends React.Component{
         })
     }
 
+    valueCheck(e){
+        e.preventDefault();
+        if(isNaN(e.target.value)){
+            alert("Only numbers are alowed!");
+            e.target.value = "";
+        }
+    }
+
     render(){
 
         return (
@@ -58,10 +66,10 @@ class AddSeller extends React.Component{
                                             </div>
                                             <div class="row mt-5">
                                                 <div class="col">
-                                                <input type="number" class="form-control" name="wholeWeight" placeholder="Whole weight" required/>
+                                                <input type="text" class="form-control" name="wholeWeight" id="wholeWeight" onChange={(e) => this.valueCheck(e)} placeholder="Whole weight" required/>
                                                 </div>
                                                 <div class="col">
-                                                <input type="number" class="form-control" name="wetWeight" placeholder="Wet weight" required/>
+                                                <input type="text" class="form-control" name="wetWeight" id="wetWeight" onChange={(e) => this.valueCheck(e)} placeholder="Wet weight" required/>
                                                 </div>
                                             </div>
                                             <div class="form-group mt-5">

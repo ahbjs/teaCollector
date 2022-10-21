@@ -30,6 +30,20 @@ class AddRoad extends React.Component{
             }
         })
     }
+
+    checkDate(e){
+        e.preventDefault();
+        var diff = new Date() - new Date(e.target.value);
+        if(diff > 0){
+            alert("Please select a future date!");
+            document.getElementById("sbtn").disabled = true;  
+            e.target.value = "";       
+        }else{
+            document.getElementById("sbtn").disabled = false;         
+        }
+        
+    }
+
     render(){
 
         return (
@@ -51,9 +65,9 @@ class AddRoad extends React.Component{
                                     <input type="text" class="form-control" id="road" placeholder="Enter Road Name"/>
                                 </div>
                                 <div class="form-group mt-4 mb-4">
-                                    <input type="date" class="form-control" id="date" placeholder="Select Date"/>
+                                    <input type="date" class="form-control" id="date" onChange={(e) => this.checkDate(e)} placeholder="Select Date"/>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100">Add Road</button>
+                                <button type="submit" class="btn btn-primary w-100" id="sbtn">Add Road</button>
                             </form>
                         </div>
 
