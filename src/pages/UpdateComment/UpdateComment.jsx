@@ -4,9 +4,12 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import img5 from "../../images/img5.png";
 import "./UpdateComment.css";
-
+import HeaderSelling from "../../components/Header/HeaderSelling";
 export default function UpdateComment(props) {
-  const id = props.match.params.phone;
+  const currentUrl = window.location.pathname;
+  const id = currentUrl.split("/")[2];
+  //alert(idd);
+  //const id = props.match.params.phone;
   console.log(id);
 
   const [phone, setphone] = useState("");
@@ -54,7 +57,7 @@ export default function UpdateComment(props) {
 
   return (
     <div>
-      <Header />
+      <HeaderSelling />
       <img className="form-img" src={img5} />
       <form className="formAddSelling" onSubmit={sendData1}>
         <p className="formHeading2">Update Comment</p>

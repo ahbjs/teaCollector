@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import Header from "../../components/Header/Header";
+import HeaderSelling from "../../components/Header/HeaderSelling";
 import Footer from "../../components/Footer/Footer";
 import "./WebBook.css";
 import { BrowserRouter, Link } from "react-router-dom";
@@ -79,7 +79,7 @@ export default function WebBook() {
 
   return (
     <div>
-      <Header />
+      <HeaderSelling />
       <div className="table__div">
         <p className="table__title">Tea Web Book</p>
         <p className="table__des">View your Tea leaves details online </p>

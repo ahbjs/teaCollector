@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import Header from "../../components/Header/Header";
+import HeaderSelling from "../../components/Header/HeaderSelling";
 import Footer from "../../components/Footer/Footer";
 import "./ContactUS.css";
 import { BrowserRouter, Link } from "react-router-dom";
@@ -74,7 +74,7 @@ export default function ContactUs() {
 
   return (
     <div>
-      <Header />
+      <HeaderSelling />
       <div className="table__div">
         <p className="table__title">Contact Us</p>
         <p className="table__des">View your Contact Us details </p>

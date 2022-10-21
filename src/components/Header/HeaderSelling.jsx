@@ -2,7 +2,7 @@ import "./Header.css"
 import logo_img from "../../../src/images/logo_img.png"
 import { BrowserRouter, Link } from "react-router-dom";
 
-export default function Header(){
+export default function HeaderSelling(){
     return (
       <div>
         <Link to={'/'}>
@@ -16,8 +16,11 @@ export default function Header(){
           <Link to="/aboutus">
             <p className="navBarText2">About Us</p>
           </Link>
-          <Link to="/login">
-            <p className="navBarText3">Login</p>
+          <Link to="/webbook">
+            <p className="navBarText3">Web Book</p>
+          </Link>
+          <Link to="/contactus">
+            <p className="navBarText4">Service Details</p>
           </Link>
           </div>
       </div>

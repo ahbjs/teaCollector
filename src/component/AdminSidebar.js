@@ -15,7 +15,9 @@ class AdminSidebar extends React.Component {
         style={{ width: "280px", height: "1000px", float: "left" }}
       >
         <div style={{ textAlign: "center" }}>
-          <img src={logo} width="80" height="75" />
+          <Link to={'/'}>
+            <img src={logo} width="80" height="75" />
+          </Link>
           <br />
           <span class="fs-4" style={{ color: "#09B44D", fontWeight: "bold" }}>
             Tea Collector
