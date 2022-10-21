@@ -2,16 +2,28 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./UpdatePrice.css";
 import AdminSidebar from "../../component/AdminSidebar";
+import { useParams } from "react-router-dom";
 
 export default function UpdatePrice(props) {
-  const id = props.match.params.sellerID;
-  console.log(id);
+  const id = useParams();
+  const ID = id.sellerID;
+  console.log(ID);
 
   const [sellerID, setsellerID] = useState("");
   const [teaWeight, setteaWeight] = useState("");
   const [wetWeight, setwetWeight] = useState("");
   const [price, setprice] = useState("");
   const [date, setdate] = useState("");
+
+  const [updatePrice, setupdatePrice] = useState([
+    {
+      sellerID: "",
+      teaWeight: "",
+      wetWeight: "",
+      price: "",
+      date: "",
+    },
+  ]);
 
   // get data
   useEffect(() => {

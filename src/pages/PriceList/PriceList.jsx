@@ -59,11 +59,9 @@ export default function PriceList() {
             parseInt(prices.price)}
         </td>
         <td>
-          < BrowserRouter forceRefresh={true}>
-          <Link to={`/PriceList/update/${prices.sellerID}`}>
+        <Link to={`/update/${prices.sellerID}`}>
             <button class="button-30">Update</button>
           </Link>
-          </BrowserRouter>
           <button class="button-99" onClick={() => onDelete(prices.sellerID)}>
             Reject
           </button>

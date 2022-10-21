@@ -83,7 +83,7 @@ function App() {
 
             <Route
               exact
-              path="/PriceList/update/:sellerID"
+              path="/update/:sellerID"
               element={<UpdatePrice />}
             />
 
