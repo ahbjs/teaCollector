@@ -185,9 +185,11 @@ export default function LorryManagement() {
         <div className="table2">
           <h3 className="tabelTopic">Accepted Lorries</h3>
           <h3 className="tableDis">Accepted lorry details</h3>
-          <button class="button-89" onClick={handlePrint}>
-            Genarate report
-          </button>
+          <a href="https://tea-collector-api.herokuapp.com/lorryAccept/getRoadReport" target={'_blank'}>
+            <button class="button-89">
+              Genarate report
+            </button>
+          </a>
           <br />
           <br />
           <table ref={componentRef} className="table">
