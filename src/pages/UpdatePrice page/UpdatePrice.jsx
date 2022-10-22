@@ -5,9 +5,9 @@ import AdminSidebar from "../../component/AdminSidebar";
 import { useParams } from "react-router-dom";
 
 export default function UpdatePrice(props) {
-  const id = useParams();
-  const ID = id.sellerID;
-  console.log(ID);
+  const currentUrl = window.location.pathname;
+  const id = currentUrl.split("/")[2];
+  //console.log(id);
 
   const [sellerID, setsellerID] = useState("");
   const [teaWeight, setteaWeight] = useState("");

@@ -4,13 +4,34 @@ import 'font-awesome/css/font-awesome.min.css';
 import AdminSidebar from '../AdminSidebar';
 import '../../css/sidebar.css';
 import '../../css/admin.css';
+import axios from "axios";
+
 
 class AdminDashboard extends React.Component{
     constructor(props){
       super(props);
-      this.state = {apiResponse:[]};
+      this.state = {lorry:[]};
     }
   
+      
+    setRoads(data){
+        this.setState({
+            lorry : data
+        });
+        console.log(this.state.lorry);
+    }
+
+    componentDidMount(){
+        this.loadRoads();
+        
+    }
+
+    loadRoads(){
+        axios.get("https://tea-collector-api.herokuapp.com/lorry/get")
+        .then(data => this.setRoads(data.data))
+        .catch(error => console.log(error));
+    }
+
     render(){
 
         return (
@@ -30,13 +51,17 @@ class AdminDashboard extends React.Component{
                                     <th>Address</th>
                                     <th>NIC Number</th>
                                 </tr>
-                                <tr>
-                                    <td>ahb</td>
-                                    <td>ahb</td>
-                                    <td>ahb</td>
-                                    <td>ahb</td>
-                                    <td>ahb</td>
-                                </tr>
+                                {this.state.lorry.map(lorry => {
+                                    return(
+                                        <tr>
+                                                    <td>{lorry.name}</td>
+        <td>{lorry.vehicle}</td>
+        <td>{lorry.vehicleNo}</td>
+        <td>{lorry.address}</td>
+        <td>{lorry.nic}</td>
+                                        </tr>
+                                    )
+                                })}
                             </table>
                         </div>
 
